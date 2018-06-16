@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description"id="button1" content="Timer Game">
+  <meta name="author" content="c-rter">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<button onclick="initTimedText()">Start</button>
+
+<h1><span id="mainQuestion"></span></h1>
+
+<div id="buttonSection">
+
+        <button onclick="middleScreen(1)" id="firstAnswer">Question1</button>
+        <button onclick="middleScreen(2)" id="secondAnswer">Question2</button>
+        <button onclick="middleScreen(3)" id="thirdAnswer">Question3</button>
+        <button onclick="middleScreen(4)" id="fourthAnswer">Question4</button>
+
+</div>
+
+<div id="resultsSection">
+<h1><span id="winLose"></span></h1>
+<h1>Your Answer: <span id="yourAnswer"></span></h1>
+<h1>Correct Answer: <span id="correctAnswer"></span></h1>
+</div>
+
+  <script src="game.js"></script>
+</body>
+</html>
