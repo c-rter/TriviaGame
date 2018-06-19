@@ -12,10 +12,12 @@ var counter = 0;
 var myTimer;
 var correct = 0;
 var incorrect = 0;
+var message;
 
 $("#resultsSection").hide();
 
 function initTimedText() {
+    $("#startButton").hide();
     $("#mainQuestion").text(questions[counter]);
     $("#firstAnswer").text(button1answers[counter]);
     $("#secondAnswer").text(button2answers[counter]);
@@ -30,55 +32,69 @@ middleScreen();
 }
 
 function middleScreen (inputTest) {
-    alert(inputTest);
     clearTimeout(myTimer);
     $("#buttonSection").hide();
     $("#resultsSection").show();
 
-    if (counter = 0) { // Question 1
+    if (counter == 0) { // Question 1
 
-        if (inputTest = 1){
-            correct++;
+        if (inputTest == 1){
+        var message = "You Are The Best!!!!";
+        $("#winLose").text(message);
+        $("#correctAnswer").text(button1answers[0]);
         }
         else {
-            incorrect++;
+        var message = "You Are An Idiot!!!!";
+        $("#winLose").text(message);
+        $("#correctAnswer").text(button1answers[0]);
         }
 
     }
 
-    if (counter = 3) { // Question 2
+    if (counter == 1) { // Question 2
 
-        if (inputTest = 1){
-            correct++;
+        if (inputTest == 3){
+        var message = "You Are The Best!!!!";
+        $("#winLose").text(message);
+        $("#correctAnswer").text(button3answers[1]);
         }
         else {
-            incorrect++;
+        var message = "You Are An Idiot!!!!";
+        $("#winLose").text(message);
+        $("#correctAnswer").text(button3answers[1]);
         }
 
     }
 
-    if (counter = 2) { // Question 3
+    if (counter == 2) { // Question 3
 
-        if (inputTest = 1){
-            correct++;
+        if (inputTest == 2){
+            var message = "You Are The Best!!!!";
+            $("#winLose").text(message);
+            $("#correctAnswer").text(button2answers[2]);
         }
         else {
-            incorrect++;
+            var message = "You Are An Idiot!!!!";
+            $("#winLose").text(message);
+            $("#correctAnswer").text(button2answers[2]);
         }
 
     }
 
-    if (counter = 4) { // Question 4
+    if (counter == 3) { // Question 4
 
-        if (inputTest = 1){
-            correct++;
+        if (inputTest == 4){
+            var message = "You Are The Best!!!!";
+            $("#winLose").text(message);
+            $("#correctAnswer").text(button4answers[3]);
         }
         else {
-            incorrect++;
+            var message = "You Are An Idiot!!!!";
+            $("#winLose").text(message);
+            $("#correctAnswer").text(button4answers[3]);
         }
 
     }
-
 
     setTimeout(inPlayTimedText, 7000);
 }
@@ -86,6 +102,12 @@ function middleScreen (inputTest) {
 function inPlayTimedText() {
 
     counter++;
+
+    if (counter == 4)
+    {
+alert ("The end");
+    }
+
     $("#resultsSection").hide();
     $("#buttonSection").show();
     $("#mainQuestion").text(questions[counter]);
@@ -94,6 +116,7 @@ function inPlayTimedText() {
     $("#thirdAnswer").text(button3answers[counter]);
     $("#fourthAnswer").text(button4answers[counter]);
     myTimer = setTimeout(tooSlow, 7000);
+
 }
 
 
