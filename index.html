@@ -18,11 +18,12 @@
 </head>
 
 <body>
-  <h1>Oscar Best Picture Winners | THE GAME</h1>
-<button id = "startButton" onclick="initTimedText()">Start</button>
+  <h1 id="mainTitle">Oscar Best Picture Winners | THE GAME</h1>
+  <p><img src="oscar.jpg"></p>
+<button id="startButton" onclick="initTimedText()">Start</button>
 
-<h1><span id="mainQuestion"></span></h1>
-<h1><span id="timeRemaining"></span></h1>
+<h2><span id="mainQuestion"></span></h2>
+<h2><span id="timeRemaining"></span></h2>
 
 <div id="buttonSection">
 
@@ -34,8 +35,8 @@
 </div>
 
 <div id="resultsSection">
-<h1><span id="winLose"></span></h1>
-<h1>Correct Answer: <span id="correctAnswer"></span></h1>
+<h2><span id="winLose"></span></h2>
+<h2 id="correctText">Correct Answer: <span id="correctAnswer"></span></h2>
 </div>
 
   <script src="game.js"></script>
