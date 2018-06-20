@@ -28,6 +28,7 @@ function bigTimer () {
 
 function initTimedText() {
     $("#startButton").hide();
+    bigTimer();
     countdownTimer = setInterval(bigTimer, 1000);
     $("#timeRemaining").show();
     $("#mainQuestion").show();
@@ -127,6 +128,7 @@ function resetGame () {
     clearTimeout(myTimer);
     alert("Game over. Press the start button to play again.");
     counter = 0;
+    countdown = 7;
     $("#resultsSection").hide();
     $("#mainQuestion").hide();
     $("#buttonSection").hide();
@@ -148,5 +150,3 @@ function inPlayTimedText() {
     myTimer = setTimeout(tooSlow, 7000);
 
 }
-
-
