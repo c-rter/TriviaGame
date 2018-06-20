@@ -12,7 +12,7 @@ var counter = 0;
 var myTimer;
 var countdownTimer;
 var message;
-var countdown = 7;
+var countdown = 10;
 
 
 $("#resultsSection").hide();
@@ -20,7 +20,7 @@ $("#resultsSection").hide();
 function bigTimer () {
     if (countdown <= 0) {
         clearInterval(countdownTimer);
-        countdown = 7;
+        countdown = 10;
     }
     $("#timeRemaining").text(countdown);
     countdown--;
@@ -38,7 +38,7 @@ function initTimedText() {
     $("#secondAnswer").text(button2answers[counter]);
     $("#thirdAnswer").text(button3answers[counter]);
     $("#fourthAnswer").text(button4answers[counter]);
-    myTimer = setTimeout(tooSlow, 7000);
+    myTimer = setTimeout(tooSlow, 10000);
 }
 
 function tooSlow () {
@@ -128,7 +128,7 @@ function resetGame () {
     clearTimeout(myTimer);
     alert("Game over. Press the start button to play again.");
     counter = 0;
-    countdown = 7;
+    countdown = 10;
     $("#resultsSection").hide();
     $("#mainQuestion").hide();
     $("#buttonSection").hide();
@@ -147,6 +147,6 @@ function inPlayTimedText() {
     $("#secondAnswer").text(button2answers[counter]);
     $("#thirdAnswer").text(button3answers[counter]);
     $("#fourthAnswer").text(button4answers[counter]);
-    myTimer = setTimeout(tooSlow, 7000);
+    myTimer = setTimeout(tooSlow, 10000);
 
 }
