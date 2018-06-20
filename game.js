@@ -7,7 +7,8 @@ var button2answers = ["Zero Dark Thirty", "Django Unchained", "Argo", "Lincoln"]
 var button3answers = ["The Help", "The Artist", "Hugo", "The Tree of Life"];
 var button4answers = ["The Wolf of Wall Street", "Gravity", "Philomena", "12 Years a Slave"];
 
-
+var correctCounter = 0;
+var incorrectCounter = 0;
 var counter = 0;
 var myTimer;
 var countdownTimer;
@@ -58,11 +59,13 @@ function middleScreen (inputTest) {
         var message = "Well done, you have a great movie memory!";
         $("#winLose").text(message);
         $("#correctAnswer").text(button1answers[0]);
+        correctCounter++;
         }
         else {
         var message = "Difficult isn't it! Who has space in their brain for this stuff anyways...";
         $("#winLose").text(message);
         $("#correctAnswer").text(button1answers[0]);
+        incorrectCounter++;
         }
 
     }
@@ -73,11 +76,13 @@ function middleScreen (inputTest) {
         var message = "Well done, you have a great movie memory!";
         $("#winLose").text(message);
         $("#correctAnswer").text(button3answers[1]);
+        correctCounter++;
         }
         else {
         var message = "Difficult isn't it! Who has space in their brain for this stuff anyways...";
         $("#winLose").text(message);
         $("#correctAnswer").text(button3answers[1]);
+        incorrectCounter++;
         }
 
     }
@@ -88,11 +93,13 @@ function middleScreen (inputTest) {
             var message = "Well done, you have a great movie memory!";
             $("#winLose").text(message);
             $("#correctAnswer").text(button2answers[2]);
+            correctCounter++;
         }
         else {
             var message = "Difficult isn't it! Who has space in their brain for this stuff anyways...";
             $("#winLose").text(message);
             $("#correctAnswer").text(button2answers[2]);
+            incorrectCounter++;
         }
 
     }
@@ -103,11 +110,13 @@ function middleScreen (inputTest) {
             var message = "Well done, you have a great movie memory!";
             $("#winLose").text(message);
             $("#correctAnswer").text(button4answers[3]);
+            correctCounter++;
         }
         else {
             var message = "Difficult isn't it! Who has space in their brain for this stuff anyways...";
             $("#winLose").text(message);
             $("#correctAnswer").text(button4answers[3]);
+            incorrectCounter++;
         }
 
     }
@@ -126,8 +135,10 @@ function middleScreen (inputTest) {
 
 function resetGame () {
     clearTimeout(myTimer);
-    alert("Game over. Press the start button to play again.");
+    alert("Correct: " + correctCounter + " Incorrect: " + incorrectCounter + "\n" + "Game over. Press the start button to play again.");
     counter = 0;
+    correctCounter = 0;
+    incorrectCounter = 0;
     countdown = 10;
     $("#resultsSection").hide();
     $("#mainQuestion").hide();
