@@ -14,7 +14,7 @@ var countdownTimer;
 var message;
 var countdown = 10;
 
-
+$("#buttonSection").hide();
 $("#resultsSection").hide();
 
 function bigTimer () {
@@ -114,12 +114,12 @@ function middleScreen (inputTest) {
 
     if (counter < 3)
     {
-        setTimeout(inPlayTimedText, 7000);
+        setTimeout(inPlayTimedText, 10000);
     }
 
     if (counter == 3)
     {
-        setTimeout(resetGame, 7000);
+        setTimeout(resetGame, 10000);
     }
 
 }
