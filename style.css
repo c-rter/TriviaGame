@@ -1,0 +1,24 @@
+button { 
+    color: black; 
+    background-color: lightyellow;
+    border:1px solid; 
+    border-color: gold;
+    font-size: 15px;
+}
+
+#mainTitle {
+
+    color: goldenrod;
+
+}
+
+#startButton {
+
+font-size: 25px;
+
+}
+
+#correctText {
+
+    color: green;
+}
